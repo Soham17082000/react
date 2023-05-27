@@ -1,0 +1,16 @@
+export const Item_Crud = {
+  POST_DATA: "POST_DATA",
+  POSTDATA_SUCCESS: "SUCCESS",
+  POSTDATA_FAILURE: "ERROR",
+};
+
+export const fetch_data = {
+  FETCH_DATA: "FETCH_DATA",
+  FETCH_DATA_SUCCESS: "SUCCESS",
+  FETCH_DATA_FAILURE: "ERROR",
+};
+export const update_data={
+  UPDATE_DATA:"UPDATE_DATA",
+  UPDATE_DATA_SUCCESS:"SUCCESS",
+  UPDATE_DATA_FAILURE:"ERROR"
+}
