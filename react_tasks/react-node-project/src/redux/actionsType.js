@@ -14,3 +14,9 @@ export const update_data={
   UPDATE_DATA_SUCCESS:"SUCCESS",
   UPDATE_DATA_FAILURE:"ERROR"
 }
+
+export const delete_data={
+  DELETE_DATA:"DELETE_DATA",
+  DELETE_DATA_SUCCESS:"SUCCESS",
+  DELETE_DATA_FAILURE:"ERROR"
+}

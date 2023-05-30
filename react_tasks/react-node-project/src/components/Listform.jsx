@@ -3,22 +3,31 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { MDBBtn, MDBContainer } from 'mdb-react-ui-kit';
+import '../css/listform.css'
 
 function ListForm() {
   const state = useSelector((state) => state.FETCH_DATA);
+  console.log("listviewstate",state)
+
   const { id } = useParams();
 
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    if (state?.data?.users) {
-      const user = state.data.users.find((user) => user.id === id);
+    if (state) {
+      const user = state.find((user) => user.id === id);
+     
       setUserData(user);
     }
   }, [state, id]);
 
   return (
     <>
+          <div className="container-fluid bg-dark">
+
+    <h1 > Display Data</h1>
+    </div>
       <div className="container-fluid user ">
         <div className="row hidden-md-up d-flex  justify-content-center mt-5 ">
           {userData && (

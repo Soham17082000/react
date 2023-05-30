@@ -1,4 +1,4 @@
-import { Item_Crud, fetch_data, update_data } from "../actionsType";
+import { Item_Crud, fetch_data, update_data,delete_data } from "../actionsType";
 
 const initialState = {
   POST_DATA: [],
@@ -40,7 +40,9 @@ const apiReducer = (state = initialState, action) => {
         error: null,
       };
 
+
     case fetch_data.FETCH_DATA_SUCCESS:
+      console.log("sdihkcfvgodf",action.payload)
       return {
         ...state,
         FETCH_DATA: action.payload,
@@ -76,6 +78,28 @@ const apiReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload,
       };
+
+      case delete_data.DELETE_DATA:
+        return {
+          ...state,
+          loading: true,
+          error: null,
+        };
+  
+      case delete_data.DELETE_DATA_SUCCESS:
+        return {
+          ...state,
+          loading: false,
+          error: null,
+        };
+  
+      case delete_data.DELETE_DATA_FAILURE:
+        return {
+          ...state,
+          loading: false,
+          error: action.payload,
+        };
+  
 
     default:
       return state;
